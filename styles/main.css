@@ -39,6 +39,17 @@ main {
     height: 100%;
 }
 
+#forms {
+    display: flex;
+    justify-content: center;
+}
+
+#url-sec {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -47,5 +58,4 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
 }
