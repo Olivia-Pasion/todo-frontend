@@ -20,36 +20,36 @@ export async function getUser() {
     }
 }
 
-// export async function checkAuth() {
-//     const user = await getUser();
+export async function checkAuth() {
+    const user = await getUser();
 
-//     if (!user) location.replace('../');
-// }
+    if (!user) location.replace('../');
+}
 
-// export async function redirectIfLoggedIn() {
-//     if (await getUser()) {
-//         location.replace('./index.html');
-//     }
-// }
+export async function redirectIfLoggedIn() {
+    if (await getUser()) {
+        location.replace('./index.html');
+    }
+}
 
-// export async function signupUser(email, password) {
-//     const resp = await fetch(`${BASE_URL}/api/v1/users`, {
-//         method: 'POST',
-//         headers: {
-//             Accept: 'application/json',
-//             'Content-Type': 'application/json',
-//         },
-//         credentials: 'include',
-//         mode: 'cors',
-//         body: JSON.stringify({ email, password })
-//     });
-//     const data = await resp.json();
-//     if (resp.ok) {
-//         return data;
-//     } else {
-//         throw new Error(data.message);
-//     }
-// }
+export async function signupUser(email, password) {
+    const resp = await fetch(`${BASE_URL}/api/v1/users`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        mode: 'cors',
+        body: JSON.stringify({ email, password })
+    });
+    const data = await resp.json();
+    if (resp.ok) {
+        return data;
+    } else {
+        throw new Error(data.message);
+    }
+}
 
 // export async function getTodoTasks() {
 //     const resp = await fetch(`${BASE_URL}/api/v1/tasks`, {
